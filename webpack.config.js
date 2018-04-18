@@ -17,7 +17,7 @@ var getHtmlConfig=function(name){
 }
 var config= {
     entry: {
-    	'common':['./src/page/common/index.js','webpack-dev-server/client?http://localhost:8088/'],
+    	'common':['./src/page/common/index.js'],
     	'index':['./src/page/index/index.js'],
     	'login':['./src/page/login/index.js']
     },
@@ -40,6 +40,14 @@ var config= {
             loader: 'url-loader?limit=100&name=resource/[name].[ext]'
         }
         ]
+    },
+    resolve:{
+        alias : {
+            util    : __dirname + '/src/util',
+            page    : __dirname + '/src/page',
+            service : __dirname + '/src/service',
+            image   : __dirname + '/src/image'
+        }
     },
     plugins:[
         //独立通用模块到js/base.js
