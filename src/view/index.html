@@ -1,11 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+	<%= require('html-loader!./layout/html-common.html') %>
+	<title>happymmall电商平台</title>
 </head>
 <body>
-	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+	<%= require('html-loader!./layout/nav.html') %>
+	<div>
+		<i class="fa fa-user"></i>
+	</div>
+	
+	<%= require('html-loader!./layout/footer.html') %>
 hello world
 </body>
 </html>

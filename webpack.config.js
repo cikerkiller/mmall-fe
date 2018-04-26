@@ -31,22 +31,31 @@ var config= {
     },*/
     module: {
         loaders: [
-        {
-            test: /\.css$/,
-            loader: Ex.extract('style-loader', 'css-loader')  // 单独打包出CSS，这里配置注意下
-        },
-        {
-            test: /\.(gif|png|jpg|jpeg|woff|svg|eot|ttf)\??.*$/,
-            loader: 'url-loader?limit=100&name=resource/[name].[ext]'
-        }
+            {
+                test: /\.css$/,
+                loader: Ex.extract('style-loader', 'css-loader')  // 单独打包出CSS，这里配置注意下
+            },
+            {
+                test: /\.(gif|png|jpg|jpeg|woff|svg|eot|ttf)\??.*$/,
+                loader: 'url-loader?limit=100&name=resource/[name].[ext]'
+            },
+            {
+                test: /\.string$/, 
+                loader: 'html-loader',
+                query : {
+                    minimize : true,
+                    removeAttributeQuotes : false
+                }
+            }
         ]
     },
     resolve:{
         alias : {
-            util    : __dirname + '/src/util',
-            page    : __dirname + '/src/page',
-            service : __dirname + '/src/service',
-            image   : __dirname + '/src/image'
+            node_modules    : __dirname + '/node_modules',
+            util            : __dirname + '/src/util',
+            page            : __dirname + '/src/page',
+            service         : __dirname + '/src/service',
+            image           : __dirname + '/src/image'
         }
     },
     plugins:[
