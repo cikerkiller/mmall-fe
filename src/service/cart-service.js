@@ -1,15 +1,8 @@
 /*
 * @Author: ciker
-* @Date:   2018-04-26 22:23:52
-* @Last Modified by:   ciker
-* @Last Modified time: 2018-04-26 22:26:46
-*/
-getCartCount
-/*
-* @Author: ciker
 * @Date:   2018-04-26 22:07:02
 * @Last Modified by:   ciker
-* @Last Modified time: 2018-04-26 22:20:16
+* @Last Modified time: 2018-04-27 23:15:44
 */
 var _mm = require('util/mm.js');
 
